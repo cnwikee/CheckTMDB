@@ -13,6 +13,8 @@ country_code = 'jp' #节点
 DOMAINS = [
     'tmdb.org',
     'api.tmdb.org',
+    'api.telegram.org',
+    'github.com',
     'files.tmdb.org',
     'themoviedb.org',
     'api.themoviedb.org',
