@@ -1,29 +1,29 @@
 # Tmdb Hosts Start
-18.154.101.15               tmdb.org
-13.32.205.88                api.tmdb.org
+108.139.29.78               tmdb.org
+13.32.205.89                api.tmdb.org
 149.154.167.220             api.telegram.org
 20.27.177.113               github.com
-13.249.74.58                files.tmdb.org
-108.156.201.18              themoviedb.org
-13.226.251.73               api.themoviedb.org
-108.159.227.37              www.themoviedb.org
-18.238.136.78               auth.themoviedb.org
-169.150.207.212             image.tmdb.org
-169.150.207.212             images.tmdb.org
+3.167.163.99                files.tmdb.org
+108.159.227.111             themoviedb.org
+3.170.103.59                api.themoviedb.org
+108.159.227.111             www.themoviedb.org
+18.155.192.98               auth.themoviedb.org
+169.150.207.216             image.tmdb.org
+84.17.38.228                images.tmdb.org
 52.94.237.74                imdb.com
-3.171.148.131               www.imdb.com
-52.94.225.248               secure.imdb.com
-3.171.148.131               s.media-imdb.com
-52.94.225.248               us.dd.imdb.com
-3.171.148.131               www.imdb.to
-98.82.155.134               origin-www.imdb.com
-23.205.90.122               ia.media-imdb.com
-99.84.123.80                thetvdb.com
-99.84.123.80                api.thetvdb.com
-23.205.90.203               ia.media-imdb.com
+18.155.186.154              www.imdb.com
+52.94.237.74                secure.imdb.com
+3.168.39.73                 s.media-imdb.com
+52.94.237.74                us.dd.imdb.com
+13.35.99.7                  www.imdb.to
+98.82.158.179               origin-www.imdb.com
+23.205.90.170               ia.media-imdb.com
+52.84.53.80                 thetvdb.com
+3.167.162.86                api.thetvdb.com
+23.205.90.170               ia.media-imdb.com
 151.101.89.16               f.media-amazon.com
-52.85.12.129                imdb-video.media-imdb.com
-# Update time: 2025-09-13T18:18:57+08:00
+18.238.192.52               imdb-video.media-imdb.com
+# Update time: 2025-09-14T06:17:23+08:00
 # IPv4 Update url: https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv4
 # IPv6 Update url: https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv6
 # Star me: https://github.com/cnwikee/CheckTMDB
