@@ -4,6 +4,7 @@ import random
 import time
 import os
 import sys
+import re  # 导入正则模块用于IP验证
 from datetime import datetime, timezone, timedelta
 from retry import retry
 import socket
@@ -169,7 +170,7 @@ def get_domain_ips(domain, record_type):
         "accept": "*/*",
         "accept-encoding": "gzip, deflate, br, zstd",
         "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
-        "content-type": "application/json; charset=UTF-8"，  # 关键：指定JSON格式负载
+        "content-type": "application/json; charset=UTF-8",  # 关键：指定JSON格式负载
         "referer": f"https://dns.google/query?name={domain}&rr_type={record_type}&ecs=",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0"
     }
@@ -194,19 +195,19 @@ def get_domain_ips(domain, record_type):
             return all_ips
 
         # 核心：提取Answer数组中的data字段（IP地址）
-        answer_list = data.get("Answer"， [])
+        answer_list = data.get("Answer", [])
         if not answer_list:
             print(f"未找到 {domain} 的{record_type}记录（Answer字段为空）")
             return all_ips
 
         # 遍历Answer数组，提取每个条目的data值（IP）
-        for answer 在 answer_list:
+        for answer in answer_list:
             ip = answer.get("data")
             if not ip:  # 过滤空值
                 continue
             
             # 验证IP格式合法性
-            if Utils.validate_ip(ip):
+            if validate_ip(ip):
                 all_ips.append(ip)
                 print(f"提取到合法IP：{ip}")
             else:
