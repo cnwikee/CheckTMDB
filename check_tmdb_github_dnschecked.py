@@ -31,7 +31,14 @@ DOMAINS = [
     'api.thetvdb.com',
     'ia.media-imdb.com',
     'f.media-amazon.com',
-    'imdb-video.media-imdb.com'
+    'imdb-video.media-imdb.com',
+    'webservice.fanart.tv',
+    'images.fanart.tv',
+    'assets.fanart.tv',
+    'fanart.tv',
+    'api.trakt.tv',
+    'api-staging.trakt.tv',
+    'trakt.tv'
 ]
 
 Tmdb_Host_TEMPLATE = """# Tmdb Hosts Start
