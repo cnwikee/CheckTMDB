@@ -111,7 +111,7 @@ def get_github_hosts() -> None:
     all_failed = True
     for url in github_hosts_urls:
         try:
-            response = requests.get(url)
+            response = requests.get(url, timeout=10.0)
             if response.status_code == 200:
                 github_hosts = response.text
                 all_failed = False
@@ -148,7 +148,7 @@ def get_csrf_token(udp):
             'referer': 'https://dnschecker.org/country/{country_code}/','User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0'
         }
         
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, timeout=10.0)
         if response.status_code == 200:
             csrf = response.json().get('csrf')
             print(f"获取到的CSRF Token: {csrf}")
@@ -166,7 +166,7 @@ def get_domain_ips(domain, csrf_token, udp, argument):
     headers = {'csrftoken': csrf_token, 'referer':f'https://dnschecker.org/country/{country_code}/','User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0'}
     
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, timeout=10.0)
         if response.status_code == 200:
             data = response.json()
             if 'result' in data and 'ips' in data['result']:
