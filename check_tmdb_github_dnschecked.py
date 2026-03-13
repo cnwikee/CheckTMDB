@@ -134,7 +134,7 @@ def get_github_hosts() -> None:
     all_failed = True
     for url in github_hosts_urls:
         try:
-            response = requests.get(url)
+            response = requests.get(url, timeout=10.0)
             if response.status_code == 200:
                 github_hosts = response.text
                 all_failed = False
