@@ -1,21 +1,21 @@
 # Tmdb Hosts Start
-2600:9000:2004:a000:10:db24:6940:93a1              tmdb.org
-2600:9000:234d:5400:10:fb02:4000:93a1              api.tmdb.org
-2600:9000:20ef:3c00:5:da10:7440:93a1               files.tmdb.org
-2600:9000:263c:9400:e:5373:440:93a1                themoviedb.org
-2600:9000:2784:ac00:c:174a:c400:93a1               api.themoviedb.org
-2600:9000:263c:a400:e:5373:440:93a1                www.themoviedb.org
-2600:9000:263c:6e00:16:e4a1:eb00:93a1              auth.themoviedb.org
-2400:52e0:1a01::985:1                              image.tmdb.org
-2400:52e0:1a01::900:1                              images.tmdb.org
-2600:9000:24ec:ae00:1d:d7f6:39d5:bd01              ia.media-imdb.com
-2a04:4e42:600::272                                 ia.media-imdb.com
-2a04:4e42:600::272                                 f.media-amazon.com
-2606:4700:20::681a:d7e                             images.fanart.tv
-2606:4700:20::681a:d7e                             fanart.tv
-2606:4700:10::6814:e50                             api.trakt.tv
-2606:4700:10::6814:e50                             trakt.tv
-# Update time: 2026-04-25T18:53:01+08:00
+2600:9000:2340:b800:10:db24:6940:93a1              tmdb.org
+2600:9000:2015:a000:10:fb02:4000:93a1              api.tmdb.org
+2600:9000:27da:8600:5:da10:7440:93a1               files.tmdb.org
+2600:9000:233d:6e00:e:5373:440:93a1                themoviedb.org
+2600:9000:287c:b200:c:174a:c400:93a1               api.themoviedb.org
+2600:9000:233d:7a00:e:5373:440:93a1                www.themoviedb.org
+2600:9000:2058:aa00:16:e4a1:eb00:93a1              auth.themoviedb.org
+2400:52e0:1a00::894:1                              image.tmdb.org
+2400:52e0:1a00::1234:1                             images.tmdb.org
+2a04:4e42:200::272                                 ia.media-imdb.com
+2a04:4e42:200::272                                 ia.media-imdb.com
+2a04:4e42:200::272                                 f.media-amazon.com
+2606:4700:20::ac43:4a92                            images.fanart.tv
+2606:4700:20::681a:c7e                             fanart.tv
+2606:4700:10::6814:d50                             api.trakt.tv
+2606:4700:10::6814:d50                             trakt.tv
+# Update time: 2026-04-26T06:47:02+08:00
 # IPv4 Update url: https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv4
 # IPv6 Update url: https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv6
 # Star me: https://github.com/cnwikee/CheckTMDB
