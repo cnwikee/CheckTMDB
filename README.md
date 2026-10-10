@@ -14,6 +14,7 @@
 
 - TMDB IPv4 hosts：`https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv4` ，[链接](https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv4)
 - TMDB IPv6 hosts：`https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv6` ，[链接](https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv6)
+- AdGuardHome 重写列表（A+AAAA 合并，推荐）：`https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_adguard.txt` ，[链接](https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_adguard.txt)
 
 ## 二、使用方法
 
@@ -142,6 +143,22 @@ GitHub 发行版：https://github.com/oldj/SwitchHosts/releases/latest
 #### 2.2.3 启用 hosts
 
 在左侧边栏启用 hosts，首次使用时软件会自动获取内容。如果无法连接到 GitHub，可以尝试用同样的方法添加 [GitHub520](https://github.com/521xueweihan/GitHub520) hosts。
+
+### 2.3 在 AdGuardHome 中使用（推荐，全网联机生效）
+
+本项目额外提供 AdGuardHome 专用的 DNS 重写过滤列表 `Tmdb_adguard.txt`（已同时包含 A 与 AAAA 记录），AdGuardHome 订阅后会**自动定时刷新**，无需手动改 hosts，全网联机设备即可正常削刮 TMDB / IMDB / TVDB / fanart / trakt 等。
+
+> [!NOTE]
+> 这个列表要加在 **过滤器 → DNS 拦截列表（Filters → DNS blocklists）** 下的“自定义列表”，**不要**加在“允许列表（DNS allowlist）”。原因：`$dnsrewrite` 是 AdGuardHome 的“响应修改器”，放在拦截列表里只改写域名返回的 IP、不会拦截域名；而允许列表是专门给放行/例外规则（`@@...`）用的，放进去语义不对、官方也不支持，可能不生效或冲突。
+> 另外，AdGuardHome 还有一个独立的 **过滤器 → DNS 重写（DNS rewrites）** 页面，可手动逐条填“域名 → IP”（支持通配符），但它**不能订阅 URL 自动更新**，所以不适合本项目“上游更新自动同步”的需求。
+
+1. 打开 AdGuardHome 后台 → **过滤器** → **DNS 拦截列表** → **添加拦截列表** → 选择“自定义列表”。
+2. 名称随意，URL 填：`https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_adguard.txt`
+3. 保存并启用。AdGuardHome 默认每 24 小时自动更新一次；如需更频繁，可在“设置 → DNS 设置”中调整过滤器更新间隔，或手动点击“更新过滤器”。
+4. 确保家中设备（或路由器）的 DNS 指向 AdGuardHome，即可全网联机正常解析上述域名。
+
+> [!WARNING]
+> 请勿把本项目的 hosts 格式文件（`Tmdb_host_ipv4` / `Tmdb_host_ipv6`）直接当作 AdGuardHome 过滤列表添加，否则会被识别为拦截规则而**屏蔽**这些域名。请使用专用的 `Tmdb_adguard.txt`。
 
 ## 三、参数说明
 
