@@ -124,6 +124,27 @@ def write_host_file(hosts_content: str, filename: str) -> None:
         output_fb.write(hosts_content)
         print("\n~最新TMDB" + filename + "地址已更新~")
 
+ADGUARD_TEMPLATE = """! Tmdb AdGuardHome DNS Rewrites Start
+{content}
+! Update time: {update_time}
+! Update url: https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_adguard.txt
+! Star me: https://github.com/cnwikee/CheckTMDB
+! Tmdb AdGuardHome DNS Rewrites End
+"""
+
+def write_adguard_file(ipv4_results, ipv6_results, update_time):
+    lines = []
+    for ip, domain in ipv4_results:
+        lines.append(f"||{domain}^$dnsrewrite=NOERROR;A;{ip}")
+    for ip, domain in ipv6_results:
+        lines.append(f"||{domain}^$dnsrewrite=NOERROR;AAAA;{ip}")
+    content = "\n".join(lines)
+    output = ADGUARD_TEMPLATE.format(content=content, update_time=update_time)
+    output_path = os.path.join(os.path.dirname(__file__), "Tmdb_adguard.txt")
+    with open(output_path, "w", encoding="utf-8") as fb:
+        fb.write(output)
+    print("\n~最新 AdGuardHome 重写列表已更新~")
+
 def get_github_hosts() -> None:
     github_hosts_urls = [
         "https://hosts.gitcdn.top/hosts.txt",
@@ -328,6 +349,7 @@ def main():
     ipv6_hosts_content = Tmdb_Host_TEMPLATE.format(content="\n".join(f"{ip:<50} {domain}" for ip, domain in ipv6_results), update_time=update_time) if ipv6_results else ""
 
     write_file(ipv4_hosts_content, ipv6_hosts_content, update_time)
+    write_adguard_file(ipv4_results, ipv6_results, update_time)
 
 
 if __name__ == "__main__":
