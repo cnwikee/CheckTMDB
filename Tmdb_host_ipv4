@@ -1,33 +1,33 @@
 # Tmdb Hosts Start
-143.204.1.119               tmdb.org
-3.175.34.124                api.tmdb.org
-3.169.173.42                files.tmdb.org
-3.169.173.116               themoviedb.org
-3.169.173.60                api.themoviedb.org
-3.169.173.116               www.themoviedb.org
-18.161.6.14                 auth.themoviedb.org
-169.150.249.167             image.tmdb.org
-143.244.50.210              images.tmdb.org
+18.160.200.103              tmdb.org
+13.32.205.88                api.tmdb.org
+3.167.163.99                files.tmdb.org
+108.159.227.111             themoviedb.org
+3.170.103.4                 api.themoviedb.org
+108.159.227.111             www.themoviedb.org
+99.86.77.65                 auth.themoviedb.org
+185.93.1.251                image.tmdb.org
+169.150.236.99              images.tmdb.org
 44.215.137.99               imdb.com
-13.33.164.215               www.imdb.com
-13.33.164.215               secure.imdb.com
-13.33.164.215               s.media-imdb.com
-44.215.137.99               us.dd.imdb.com
-13.33.164.215               www.imdb.to
-44.215.137.99               origin-www.imdb.com
-23.46.228.7                 ia.media-imdb.com
-3.169.171.81                thetvdb.com
-13.33.163.76                api.thetvdb.com
-23.46.228.7                 ia.media-imdb.com
-151.101.65.16               f.media-amazon.com
-18.161.6.84                 imdb-video.media-imdb.com
+3.168.36.161                www.imdb.com
+3.168.36.161                secure.imdb.com
+3.168.36.161                s.media-imdb.com
+98.82.155.134               us.dd.imdb.com
+3.168.36.161                www.imdb.to
+98.82.158.179               origin-www.imdb.com
+99.86.74.204                ia.media-imdb.com
+3.162.172.98                thetvdb.com
+3.167.162.86                api.thetvdb.com
+151.101.129.16              ia.media-imdb.com
+151.101.193.16              f.media-amazon.com
+52.85.40.46                 imdb-video.media-imdb.com
 148.113.196.166             webservice.fanart.tv
 104.26.12.126               images.fanart.tv
-158.69.209.125              assets.fanart.tv
-104.26.13.126               fanart.tv
+158.69.210.98               assets.fanart.tv
+172.67.74.146               fanart.tv
 104.20.14.80                api.trakt.tv
 104.20.14.80                trakt.tv
-# Update time: 2026-11-18T11:33:25+08:00
+# Update time: 2026-11-19T02:47:13+08:00
 # IPv4 Update url: https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv4
 # IPv6 Update url: https://raw.githubusercontent.com/cnwikee/CheckTMDB/refs/heads/main/Tmdb_host_ipv6
 # Star me: https://github.com/cnwikee/CheckTMDB
