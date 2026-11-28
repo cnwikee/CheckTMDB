@@ -35,7 +35,7 @@ jobs:
       run: |
          git config --global user.name 'GitHub Action'
          git config --global user.email 'action@github.com'
-         git add README.md Tmdb_host_ipv4 Tmdb_host_ipv6
+         git add README.md Tmdb_host_ipv4 Tmdb_host_ipv6 Tmdb_adguard.txt
          git commit -m "Update TMDB IP [action]" || echo "No changes to commit"
       continue-on-error: true
 
